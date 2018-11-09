@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :reviews
   root to: 'products#index'
 
-  resources :products, only: [:index, :show]
-  resource :product do
-    resource :review, only: [:create]
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create]
   end
 
   resources :categories, only: [:show]
@@ -23,9 +21,6 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-
-  resources :reviews, only: [:show]
-  resource :review, only: [:new, :show, :destroy]
 
   namespace :admin do
     root to: 'dashboard#show'

@@ -19,7 +19,7 @@
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
           <dt>Reviews</dt>
-            <%= form_for @review, method: :post do |f| %>
+            <%= form_for [@product, @review], method: :post do |f| %>
               <dd>Review:<%= f.text_field :description %><br /></dd>
               <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
               <dd><%= f.submit %><dd>
