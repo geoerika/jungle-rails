@@ -18,13 +18,15 @@
           <dd><%= @product.name %></dd>
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
-          <dt>Reviews</dt>
+          <% if current_user %>
+            <dt>Reviews</dt>
             <%= form_for [@product, @review], method: :post do |f| %>
               <dd>Review:<%= f.text_field :description %><br /></dd>
               <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
               <dd><%= f.submit %><dd>
             <% end %>
           <dd><%= render @product.reviews%></dd>
+          <% end %>
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
