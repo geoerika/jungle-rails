@@ -18,6 +18,12 @@
           <dd><%= @product.name %></dd>
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
+          <dt>Reviews</dt>
+            <%= form_for @review do |f| %>
+              <dd>Review:<%= f.text_field :description %><br /></dd>
+              <dd>Rating:<%= f.number_field :rating, in: 1...6 %></dd>
+            <% end %>
+          <dd><%= render @product.reviews%></dd>
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
