@@ -25,7 +25,7 @@
               <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
               <dd><%= f.submit %><dd>
             <% end %>
-          <dd><%= render @product.reviews%></dd>
+          <dd><%= render @product.reviews.order(created_at: :desc)%></dd>
           <% end %>
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
