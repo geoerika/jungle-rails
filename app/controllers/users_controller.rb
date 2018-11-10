@@ -14,6 +14,12 @@ class UsersController < ApplicationController
       end
   end
 
+  def show
+    @current_user = Users.find params[session[:user_id]]
+    @review = Review.new
+    @review.user = @current_user
+  end
+
   private
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)

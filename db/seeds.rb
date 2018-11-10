@@ -29,11 +29,16 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
 
+
+LineItem.destroy_all
+Review.destroy_all
 Product.destroy_all
+User.destroy_all
 
 cat1.products.create!({
   name:  'Men\'s Classy shirt',
@@ -130,6 +135,48 @@ cat3.products.create!({
   image: open_asset('furniture3.jpg'),
   quantity: 0,
   price: 2_483.75
+})
+
+User.create!({
+  first_name: 'Harry',
+  last_name: 'Davidson',
+  email:  'h.davidson@email.com',
+  password_digest: '1234'
+})
+
+User.create!({
+  first_name: 'Laura',
+  last_name: 'McKennet',
+  email:  'l.mckennet.com',
+  password_digest: '12345'
+})
+
+User.create!({
+  first_name: 'Boy',
+  last_name: 'George',
+  email:  'b.george.com',
+  password_digest: '123456'
+})
+
+Review.create!({
+  product: Product.first,
+  user: User.first,
+  description: 'Very stylish!',
+  rating: 5
+})
+
+Review.create!({
+  product: Product.first,
+  user: User.last,
+  description: 'The shelves started to bend in the middle after a week',
+  rating: 2
+})
+
+Review.create!({
+  product: Product.last,
+  user: User.first,
+  description: 'Comfortable pants!',
+  rating: 5
 })
 
 
