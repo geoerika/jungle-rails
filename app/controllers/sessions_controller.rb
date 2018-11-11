@@ -1,8 +1,11 @@
+# app/controllers/sessions_controller.rb
+
 class SessionsController < ApplicationController
+
   def new
   end
 
- def create
+  def create
     user = User.find_by_email(params[:email])
     # If the user exists AND the password entered is correct.
     if user && user.authenticate(params[:password])

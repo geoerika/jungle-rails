@@ -1,8 +1,9 @@
+# app/controllers/orders_controller.rb
+
 class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    # @line_items = Product.joins(:line_items).where(line_items: {order_id: @order.id})
   end
 
   def create
@@ -23,7 +24,7 @@ class OrdersController < ApplicationController
   private
 
   def empty_cart!
-    # empty hash means no products in cart :)
+    # Empty means no products in cart
     update_cart({})
   end
 

@@ -1,3 +1,5 @@
+# app/controllers/categories_controller.rb
+
 class CategoriesController < ApplicationControlle
 
   def index
