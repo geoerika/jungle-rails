@@ -20,13 +20,21 @@
           <dd><%= @product.description %></dd>
           <% if current_user %>
             <dt>Reviews</dt>
-            <%= form_for [@product, @review], method: :post do |f| %>
-              <dd>Review:<%= f.text_field :description %><br /></dd>
-              <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
-              <dd><%= f.submit %><dd>
-            <% end %>
-          <dd><%= render @product.reviews.order(created_at: :desc)%></dd>
+              <%= form_for [@product, @review], method: :post do |f| %>
+                <div class="form-group">
+                  <dd>Review:<%= f.text_field :description %><br /></dd>
+                </div>
+                <div class="form-group">
+                <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
+              </div>
+              <div class="form-group">
+                <dd><%= f.submit %><dd>
+              </dd>
           <% end %>
+          <div>
+            <dd><%= render @product.reviews.order(created_at: :desc)%></dd>
+            <% end %>
+          </div>
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
