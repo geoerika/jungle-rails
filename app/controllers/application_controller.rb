@@ -1,18 +1,16 @@
+# app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
 
-# app/controllers/application_controller.rb
-
-
+  # Creates a helper_method for
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
   helper_method :current_user
 
   def authorize
     redirect_to '/login' unless current_user
   end
-
-
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
