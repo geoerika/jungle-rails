@@ -59,6 +59,25 @@ RSpec.describe User, type: :model do
       end
 
       it { should validate_length_of(:password).is_at_least(3)}
-      end
+
+    end
+
+    describe '.authenticate_with_credentials' do
+      subject {
+          described_class.create(first_name: 'testname', last_name: 'testlastname', email: 'testemail@a.com', password: 'bdc', password_confirmation: 'bdc') }
+
+        it 'should return user when password does match email' do
+          expect(subject.authenticate_with_credentials('testemail@a.com','bdc')).to eq (subject)
+        end
+
+        it 'should return nil when password does not match email' do
+          expect(subject.authenticate_with_credentials('testemail@a.com','bdca')).to eq nil
+        end
+
+          it 'should return nil when email does not exist' do
+          expect(subject.authenticate_with_credentials('testemail2@a.com','bdc')).to eq nil
+        end
+
+    end
 
 end

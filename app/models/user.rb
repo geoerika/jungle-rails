@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
     too_short: "is too short (minimum is %{count} characters)" }
   validates :password_confirmation, presence: true
 
+  def authenticate_with_credentials(email, password)
+    user = User.find_by(email: email)
+    if user && user.authenticate(password)
+      user
+    else
+      nil
+    end
+  end
 end
