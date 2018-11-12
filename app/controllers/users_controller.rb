@@ -1,4 +1,3 @@
-# app/controllers/users_controller.rb
 
 class UsersController < ApplicationController
 
@@ -6,14 +5,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
       if @user.password == @user.password_confirmation && @user.save
-         # Tell the UserMailer to send a welcome email after save
         session[:user_id] = @user.id
-        UserMailer.welcome_email.deliver_now
+        # UserMailer.welcome_email(@user).deliver_later
         redirect_to '/'
       else
         redirect_to '/user/new'
