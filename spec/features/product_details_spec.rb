@@ -22,6 +22,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     first('.product').click_on('Detail')
 
     # DEBUG
+    #sleep(5)
     # save_screenshot
     # save_and_open_screenshot
   end
