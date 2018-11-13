@@ -78,6 +78,14 @@ RSpec.describe User, type: :model do
           expect(subject.authenticate_with_credentials('testemail2@a.com','bdc')).to eq nil
         end
 
+        it 'should return user when password contains spaces in front or at the end' do
+          expect(subject.authenticate_with_credentials('  testemail@a.com  ','bdc')).to eq (subject)
+        end
+
+        it 'should return user when password has upper and lower case mixed' do
+          expect(subject.authenticate_with_credentials('TesteMail@a.com','bdc')).to eq (subject)
+        end
+
     end
 
 end
