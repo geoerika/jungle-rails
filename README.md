@@ -4,11 +4,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
-!["Screenshot of Jungle main page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
+!["Screenshot of Jungle main page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Main.png)
 
-!["Screenshot of Jungle product under administrator page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
+!["Screenshot of Jungle products under administrator page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Product_admin.png)
 
-!["Screenshot of Jungle signup page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
+!["Screenshot of Jungle signup page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Signup.png)
 
 ## Setup
 
