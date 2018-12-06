@@ -2,27 +2,46 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Final Product
+
+!["Screenshot of Jungle main page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
+
+!["Screenshot of Jungle product under administrator page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
+
+!["Screenshot of Jungle signup page"](https://raw.githubusercontent.com/geoerika/ChattyApp/master/client/Docs/ChattyApp_main_page.png)
 
 ## Setup
 
 1. Fork & Clone
 2. Run `bundle install` to install dependencies
-3. Create `config/database.yml` by copying `config/database.example.yml`
-4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-5. Run `bin/rake db:reset` to create, load and seed db
-6. Create .env file based on .env.example
-7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+3. Run `bin/rake db:reset` to create, load and seed db
+4. Run `bin/rails s -b 0.0.0.0` to start the server
+5. Open application: http://localhost:3000
 
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
-More information in their docs: <https://stripe.com/docs/testing#cards>
+Type in a future date for Credit Card expiry date
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+* Rails 4.2.6 or above
 * PostgreSQL 9.x
 * Stripe
+* Sass-rails 5.0 or above
+* Uglifier 1.3.0 or above
+* Coffee-rails 4.1.0 or above
+* Therubyracer
+* Jquery-rails
+* Turbolinks
+* Jbuilder 2.0 or above
+* Sdoc 0.4.0 or above
+* Bcrypt 3.1.7 or above
+* Puma
+* Bootstrap-sass 3.3.6 or above
+* Font-awesome-rails
+* Money-rails
+* Carrierwave
+* Rmagick
+* Stripe
+* Faker
