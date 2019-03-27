@@ -22,10 +22,10 @@
             <dt>Reviews</dt>
               <%= form_for [@product, @review], method: :post do |f| %>
                 <div class="form-group">
-                  <dd>Review:<%= f.text_field :description %><br /></dd>
+                  <dd>Review: <%= f.text_field :description %><br /></dd>
                 </div>
                 <div class="form-group">
-                <dd>Rating:<%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
+                <dd>Rating: <%=f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]%></dd>
               </div>
               <div class="form-group">
                 <dd><%= f.submit %><dd>
