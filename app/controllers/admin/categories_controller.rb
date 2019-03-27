@@ -6,7 +6,6 @@ class Admin::CategoriesController < ApplicationController
      render plain: "I'm only accessible if you know the password"
    end
 
-
   def index
     @categories = Category.all.order(created_at: :desc)
   end
