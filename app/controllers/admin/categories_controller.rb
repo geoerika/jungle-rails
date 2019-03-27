@@ -1,11 +1,6 @@
 class Admin::CategoriesController < ApplicationController
 
   http_basic_authenticate_with name: ENV["ADMIN_NAME"], password: ENV["ADMIN_PASSWORD"]
-   # , except: :index
-
-   # def index
-   #   render plain: "Everyone can see me!"
-   # end
 
    def edit
      render plain: "I'm only accessible if you know the password"
