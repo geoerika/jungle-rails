@@ -4,6 +4,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
+Jungle Main Page
+
 !["Screenshot of Jungle main page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Main.png)
 
 !["Screenshot of Categories under Admin page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/AdminCategories.png)
