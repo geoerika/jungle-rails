@@ -6,9 +6,17 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 !["Screenshot of Jungle main page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Main.png)
 
-!["Screenshot of Jungle products under administrator page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Product_admin.png)
+!["Screenshot of Categories under Admin page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/AdminCategories.png)
 
-!["Screenshot of Jungle signup page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Signup.png)
+!["Screenshot of CreatingNew Category page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/AdminNewCategory.png)
+
+!["Screenshot of Order page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Order.png)
+
+!["Screenshot of Product Detail page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/ProductDetails.png)
+
+!["Screenshot of Jungle Login page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/Login.png)
+
+!["Screenshot of Jungle signup page"](https://raw.githubusercontent.com/geoerika/jungle-rails/master/images/SignUp.png)
 
 ## Setup
 
